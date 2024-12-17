@@ -1,0 +1,39 @@
+[
+	{
+		"id":1, 
+		"nombre": 
+		"Guitarra Electrica", 
+		"precio": 100, 
+		"imagen":"img/guitarra.jpeg" 
+	},
+	{
+		"id":2, 
+		"nombre": "Bajo Electrico", 
+		"precio":150, 
+		"imagen": "img/bajo.jpeg"
+	},
+	{
+		"id":3, 
+		"nombre": "Bateria Acustica", 
+		"precio":200, 
+		"imagen":"img/bateria.jpeg" 
+	},
+	{
+		"id":4, 
+		"nombre": "Pedal Guitarra", 
+		"precio":200, 
+		"imagen": "img/pedal.jpeg"
+	},
+	{
+		"id":5, 
+		"nombre": "Piano Electrico", 
+		"precio":200, 
+		"imagen": "img/piano.jpeg"
+	},
+	{
+		"id":6, 
+		"nombre": "Ukulele", 
+		"precio":200, 
+		"imagen":"img/ukulele.jpeg"
+	}
+]

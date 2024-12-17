@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", "sans-serif";
+	list-style: none;
+	text-decoration: none;
+}
+
+
+body{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(228, 223, 223);
+}
+
+/*-------------- HEADER ------------------------*/
+
+#header{
+
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.logo{
+
+	width: 7%;
+}
+
+h1{
+	font-size: 2em;
+}
+
+nav{
+	width: 45%;
+}
+
+nav ul {
+
+	display: flex;
+	justify-content: space-around;
+
+}
+
+li{
+	color: white;
+	font-weight: bold;
+	font-size: 1.5rem;
+	padding: 5px;
+}
+
+li a{
+	color: lightgrey;
+}
+
+li a:hover{
+	text-shadow: 2px 2px 5px rgb(212, 55, 55);;
+}
+
+/*------- HERO Section --------------------*/
+
+.hero{ 
+
+	background-color: lightgrey;
+	background-image: url("../img/hero-back-5.webp");
+	background-size: 100% 100%;
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.hero h2{ 
+	padding: 2rem;
+	color: rgb(243, 240, 240);
+	font-size: large;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px rgb(35, 23, 23);
+}
+
+.hero h2{  
+
+	font-size: 3rem;
+
+}
+
+.a-button{
+
+	font-weight: bold;
+	color: white;
+	background-color: rgb(180, 22, 22);
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 2rem;
+	margin: 0.5rem;
+	transition: background-color 0.2s ease;
+	box-shadow: 2px 2px 5px black;
+
+}
+
+.a-button:hover{
+	background-color: crimson;
+	box-shadow: 3px 3px 5px rgb(73, 3, 3);
+}
+
+/*------MAIN-------------------------------*/
+
+main { 
+	/*flex: 1;*/
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+
+}
+
+main h2{ 
+	font-size: 2rem;
+	text-align: center;
+
+}
+
+main h3{
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 1rem;
+}
+
+
+/*----Section PRODUCTOS -------------------*/
+
+/* Section de las tarjetas */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem; 
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Tarjetas */
+.producto-box {
+    width: 250px; /* Ancho fijo para todas las tarjetas */
+    aspect-ratio: 3 / 4; /* Proporción uniforme */
+    background-color: rgb(114, 119, 119);
+    color: azure;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.producto-box:hover {
+    transform: scale(1.05);
+}
+
+.img-box {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; 
+    object-fit: contain; 
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.producto-box h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.producto-box p {
+    font-size: 1rem;
+    color: lightgray;
+    margin: 0.5rem 0;
+}
+
+.agregar-carrito, 
+.eliminar-carrito,
+#vaciar-carrito {
+    border-radius: 0.5rem;
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    width: 80%; 
+    padding: 0.8rem;
+    margin-top: auto; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.agregar-carrito:hover,
+.eliminar-carrito:hover,
+#vaciar-carrito:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/*-----Section RESEÑAS --------------------*/
+
+.reseña-container{ 
+
+	align-self: center;
+	margin: 2rem;
+	width: 100%;
+	height: 45%;
+	background-color: black;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: repeat(2,1fr);
+
+}
+
+.reseñas{ 
+
+	margin: 2rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	background-color: grey;
+	border: 1px solid grey;
+	border-radius: 4px;
+
+}
+
+.reseñas h4{ 
+
+	color: white;
+	padding: 0.5rem;
+	border-bottom: 1px solid white;
+	margin-bottom: 0.5rem;
+
+}
+
+.reseñas p{ 
+
+	margin: 0.5rem;
+
+}
+
+/*--- CARRITO -----------------------------*/
+
+.carrito-main{
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.carrito-main h2{
+	margin: 0;
+}
+.carrito-container{ 
+
+	align-self: center;
+	margin: 2rem;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	
+
+}
+
+#carrito {
+    width: 95%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    background-color: rgb(150, 147, 147);
+    padding: 1rem;
+    position: relative; 
+	overflow: hidden;
+}
+
+.total-carrito {
+	
+    width: 95%;
+    margin-top: auto;   
+	display: flex;
+    justify-content: flex-end; /* Alinea el contenido hacia la derecha */
+    gap: 1rem; /* Espaciado entre los botones */
+    padding: 1rem;
+	background-color: rgb(200, 200, 200); 
+    border-top: 1px solid gray; 
+}
+
+.li-carrito {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0.5rem;
+    gap: 1rem; 
+}
+
+.eliminar-carrito,
+#vaciar-carrito {
+    width: auto; 
+    height: auto; 
+    padding: 0.5rem 1rem; 
+    font-size: 0.9rem; 
+    text-align: center;
+    border-radius: 0.3rem; 
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    margin-left: auto; 
+}
+
+.eliminar-carrito:hover,
+#vaciar-carrito:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
+
+
+/*--- FORMULARIOS -------------------------*/
+
+.contacto{
+
+	align-self: center;
+	margin: 2rem;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	width: 97%;
+	
+}
+
+.label-name{
+	grid-area: LabelName;
+}
+
+#name{
+	grid-area: InputName;
+}
+
+.label-email{
+	grid-area: LabelEmail;
+}
+
+#email{
+	grid-area: InputEmail;
+}
+
+.text-area{
+	grid-area: TextArea;
+}
+
+.form-button{
+	grid-area: FormButton;
+	padding: 1rem;
+}
+
+.formulario-contacto{
+
+	padding: 1.5rem;
+	width: 45%;
+	color: rgb(248, 248, 248);
+	display: grid;
+	grid-template: 1fr 1fr 2fr / 0.5fr 1fr 1fr;
+	grid-template-areas: "LabelName 	InputName 	InputName"
+						 "LabelEmail 	InputEmail	InputEmail"
+						 ". 			TextArea 	TextArea"
+						 ".        		. 			FormButton ";
+	gap: 0.5rem;
+}
+
+
+/*--- TESTEOS -----------------------------*/
+
+.extras{ 
+
+	margin: auto;
+	width: 75%;
+	height: 45%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+.extras h2{ 
+	font-size: 2rem;
+	text-align: center;
+	margin: 1rem;
+}
+
+
+.extras iframe{ 
+ 
+	width: 100%;
+	height: 65vh;
+
+}
+
+/*--------------- NOSOTROS ----------------*/
+
+.nosotros-main{
+	margin: 2rem auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nos-content{
+	margin: auto;
+	height: 90%;
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	
+	gap: 2rem;
+}
+
+.nos-p,
+.nos-img-box{
+	height: 50%;
+	width: 50%;
+}
+
+.nos-img{
+
+	width: 50%;
+	height: 50%;
+	object-fit: contain;
+}
+
+/*--------------- FOOTER ------------------*/
+
+footer{
+	margin-top: auto;
+	/*margin-top: 1.5rem;*/
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-a{
+	font-size: 1rem;
+}
+
+footer ul{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.contacto-container{
+	align-self: center;
+	width: 85%;
+	height: 95%;
+	padding: 2em;
+	display: grid;
+	grid-template-columns: 35% 65%;
+	grid-template-rows: 15% 85%;
+	grid-gap: 0.5rem;
+
+}
+
+.contacto-container h3{
+	
+	grid-column: span 2;
+	grid-row: 1;
+	border-bottom: 1px solid lightgrey;
+
+}
+
+.contacto-texto{
+	grid-column: 1;
+	grid-row: 2;
+	width: 25%;
+
+}
+
+.contacto-texto p{ 
+	padding: 0.5rem;
+
+}
+
+footer iframe{
+	max-height: 200px;
+	max-width: stretch;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+footer p{
+	text-align: center;
+	
+}
+
+
+/*-- BREAKPOINTS -----------------------------------------------------------------*/
+
+/* Pantalla Celular */
+@media only screen and (max-width: 600px){
+
+	.formulario-contacto{
+
+		padding: auto;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+
+	#name, #email{
+		height: 7vh;
+		
+	}
+
+}
+
+@media only screen and (min-width: 600px){
+
+	.formulario-contacto{
+
+		padding: auto;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+
+	#name, #email{
+		height: 5vh;
+	}
+
+}
+
+@media only screen and (min-width: 768px){
+
+	.formulario-contacto{
+
+		padding: auto;
+		display: grid;
+		grid-template: 1fr 1fr 1fr 1fr / 0.3fr 1fr;
+		grid-template-areas: "LabelName 	InputName"
+							 "LabelEmail 	InputEmail"
+							 ". 			TextArea"
+							 ". 			FormButton ";
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+}
+
+@media only screen and (min-width: 1200px){
+	.formulario-contacto{
+
+		grid-template: 1fr 1fr 2fr / 0.5fr 1fr 1fr;
+		grid-template-areas: "LabelName 	InputName 	InputName"
+							 "LabelEmail 	InputEmail	InputEmail"
+							 ". 			TextArea 	TextArea"
+							 ".        		. 			FormButton ";
+		gap: 1rem;
+	}
+}
