@@ -32,7 +32,7 @@ function cargarProductos(){
 
 				// Creamos texto para el producto
 				var textBox = document.createElement("p");
-				textBox.textContent = producto.precio;
+				textBox.textContent = `$${producto.precio}`;
 				textBox.classList.add("text-box");
 				
 				// Crear boton de "Agregar al carrito"
