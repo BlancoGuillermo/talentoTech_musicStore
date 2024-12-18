@@ -300,8 +300,8 @@ main h3{
     width: 95%;
     margin-top: auto;   
 	display: flex;
-    justify-content: flex-end; /* Alinea el contenido hacia la derecha */
-    gap: 1rem; /* Espaciado entre los botones */
+    justify-content: flex-end; 
+    gap: 1rem; 
     padding: 1rem;
 	background-color: rgb(200, 200, 200); 
     border-top: 1px solid gray; 
